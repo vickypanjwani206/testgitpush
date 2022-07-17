@@ -1,7 +1,7 @@
 import pymongo
+import certifi
 
-
-client = pymongo.MongoClient("mongodb+srv://vicky:vicky9007@cluster0.tlyoc.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://vicky:vicky9007@cluster0.tlyoc.mongodb.net/?retryWrites=true&w=majority",tlsCAFile=certifi.where())
 db = client.test
 print(db)
 
